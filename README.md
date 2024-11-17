@@ -1,6 +1,6 @@
 # 1. Introducción
 
-El presente informe analiza modelos de clasificación (1D/tabular, 2D/imágenes, late-fusion y early-fusión) desarrollados para abordar un problema de clasificación, enfrentando un desafío común de sobreajuste. Se implementaron diversas estrategias de regularización para mitigar este fenómeno y mejorar la generalización de los modelos.
+El presente informe analiza modelos (1D/tabular, 2D/imágenes, late-fusion y early-fusión) desarrollados para abordar un problema de clasificación, se crean inicialmente los modelos sencillos y al presentarse sobreajuste, se van implementando estrategias de regularización para mitigar este fenómeno y mejorar la generalización, obteniendo asi los que se describen a continuación para analizar hiperparámetros y variaciones en tecnicas como Transfer Learning, Fine Tuning y Fusión, en esta última veremos que es muy importante el uso inteligente de los datos, por las diferencias entre las precisiones de Entrenamiento, Validacion y Prueba.
 
 # 2. Modelo Tabular: Análisis de Hiperparámetros y Regularización
 
@@ -66,6 +66,12 @@ El presente informe analiza modelos de clasificación (1D/tabular, 2D/imágenes,
 | Modelo 1 | 80.83%                  | 55.43%               | 51.99%           | Moderado             |
 | Modelo 2 | 88.50%                  | 52.56%               | 52.95%           | Alto                 |
 | Modelo 3 | 93.72%                  | 48.72%               | 46.73%           | Muy Alto             |
+
+## 3.4 Análisis de Resultados
+
+- Modelo 1 Este modelo muestra un equilibrio más saludable entre la precisión de entrenamiento y validación, aunque aún hay margen para mejorar la generalización.
+- El aumento del tamaño del batch no ha mejorado significativamente la capacidad de generalización.
+- Tenemos poca cantidad de datos y al hacer ﬁne-tuning las precisiones empeoran.  
 
 # 4. Modelos de Fusión: Mitigación del Sobreajuste
 
